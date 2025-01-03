@@ -12,12 +12,11 @@ addbtn.addEventListener("click",()=>{
     }
     else{
         const listitem = document.createElement("li");  //so this creates a new <li></li> in the html
-        const deletebtn = document.createElement("button");//so this creates a new <button></button> in the html
+        const deletebtn = document.createElement("button");//so this creates a new <button></button> in the html.
 
         tasklist.appendChild(listitem); //here the created <li> is added inside the tasklist
         listitem.textContent = text;  //here the data entered in the todotask input field is added inside the li,i.e <li>text</list>
-
-        tasklist.appendChild(deletebtn); //here the created <button> is added inside the tasklist
+        listitem.appendChild(deletebtn); //here the created <button> is added inside the listitem
         deletebtn.textContent = "Delete"; //i.e <button>Delete</button>
         
         todotext.value = ""; // the todotask is emptied, so that the new task to be entered.
